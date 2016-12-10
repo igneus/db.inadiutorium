@@ -6,8 +6,5 @@ task import: :environment do |t|
     exit 1
   end
 
-  importer = Importer.new import_root
-  Dir.glob(File.join(import_root, '**/*.ly')).each do |full_path|
-    importer.import full_path
-  end
+  Importer.new(import_root).call
 end
