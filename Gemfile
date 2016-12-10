@@ -1,11 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'bundler'
-gem 'rake'
 gem 'hanami', git: 'git@github.com:hanami/hanami.git'
 gem 'hanami-model', '~> 0.7'
-
 gem 'pg'
+gem 'rake'
 
 group :development do
   # Code reloading
