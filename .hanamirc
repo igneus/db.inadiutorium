@@ -1,0 +1,4 @@
+project=db.inadiutorium
+architecture=container
+test=minitest
+template=erb
