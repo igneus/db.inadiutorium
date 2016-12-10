@@ -1,3 +1,20 @@
+GIT
+  remote: git@github.com:hanami/hanami.git
+  revision: eb40bc6b4cfb6d46c75e672246731e5a9712cbda
+  specs:
+    hanami (0.9.1)
+      bundler (~> 1.13)
+      concurrent-ruby (~> 1.0)
+      hanami-assets (~> 0.4)
+      hanami-controller (~> 0.8)
+      hanami-helpers (~> 0.5)
+      hanami-mailer (~> 0.4)
+      hanami-router (~> 0.8, >= 0.8.1)
+      hanami-utils (~> 0.9)
+      hanami-validations (~> 0.7)
+      hanami-view (~> 0.8)
+      thor (~> 0.19)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -40,18 +57,6 @@ GEM
       dry-equalizer (~> 0.2)
       dry-logic (~> 0.4, >= 0.4.0)
       dry-types (~> 0.9, >= 0.9.0)
-    hanami (0.9.1)
-      bundler (~> 1.13)
-      concurrent-ruby (~> 1.0)
-      hanami-assets (~> 0.4)
-      hanami-controller (~> 0.8)
-      hanami-helpers (~> 0.5)
-      hanami-mailer (~> 0.4)
-      hanami-router (~> 0.8, >= 0.8.1)
-      hanami-utils (~> 0.9)
-      hanami-validations (~> 0.7)
-      hanami-view (~> 0.8)
-      thor (~> 0.19)
     hanami-assets (0.4.0)
       hanami-helpers (~> 0.5)
       hanami-utils (~> 0.9)
@@ -146,7 +151,7 @@ DEPENDENCIES
   bundler
   capybara
   dotenv (~> 2.0)
-  hanami (~> 0.9)
+  hanami!
   hanami-model (~> 0.7)
   minitest
   pg
