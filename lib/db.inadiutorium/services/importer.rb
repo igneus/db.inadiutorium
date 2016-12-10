@@ -19,7 +19,8 @@ class Importer
         basename: File.basename(source_path),
         directory: File.dirname(source_path.sub(@root_path, ''))
     }
-    p repository.find_by_path(attrs) || repository.create(attrs)
+    source_file = repository.find_by_path(attrs) || repository.create(attrs)
+    puts source_file.full_path
   end
 
   def source_files
