@@ -4,3 +4,13 @@
   připravených v rámci projektu
   <a href="http://www.inadiutorium.cz">In adiutorium</a>.
 </p>
+
+<p>
+  Nově přidané:
+</p>
+<%= render partial: 'home/list_pieces', locals: {pieces: created_pieces} %>
+
+<p>
+  Nově aktualisované:
+</p>
+<%= render partial: 'home/list_pieces', locals: {pieces: updated_pieces} %>
