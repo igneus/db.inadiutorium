@@ -1,4 +1,8 @@
 class PieceRepository < Hanami::Repository
+  def count
+    pieces.count
+  end
+
   def newly_created(limit: 10)
     pieces
       .order(:created_at)
