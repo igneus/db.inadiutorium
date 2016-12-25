@@ -1,21 +1,4 @@
 GIT
-  remote: git@github.com:hanami/hanami.git
-  revision: eb40bc6b4cfb6d46c75e672246731e5a9712cbda
-  specs:
-    hanami (0.9.1)
-      bundler (~> 1.13)
-      concurrent-ruby (~> 1.0)
-      hanami-assets (~> 0.4)
-      hanami-controller (~> 0.8)
-      hanami-helpers (~> 0.5)
-      hanami-mailer (~> 0.4)
-      hanami-router (~> 0.8, >= 0.8.1)
-      hanami-utils (~> 0.9)
-      hanami-validations (~> 0.7)
-      hanami-view (~> 0.8)
-      thor (~> 0.19)
-
-GIT
   remote: https://github.com/igneus/lyv.git
   revision: b278dcf1c712217a3fdc4de0f7345e77889c1b15
   specs:
@@ -34,9 +17,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    concurrent-ruby (1.0.2)
+    concurrent-ruby (1.0.3)
     dotenv (2.1.1)
-    dry-configurable (0.4.0)
+    dry-configurable (0.5.0)
       concurrent-ruby (~> 1.0)
     dry-container (0.6.0)
       concurrent-ruby (~> 1.0)
@@ -64,14 +47,26 @@ GEM
       dry-equalizer (~> 0.2)
       dry-logic (~> 0.4, >= 0.4.0)
       dry-types (~> 0.9, >= 0.9.0)
+    hanami (0.9.2)
+      bundler (~> 1.13)
+      concurrent-ruby (~> 1.0)
+      hanami-assets (~> 0.4)
+      hanami-controller (~> 0.8)
+      hanami-helpers (~> 0.5)
+      hanami-mailer (~> 0.4)
+      hanami-router (~> 0.8, >= 0.8.1)
+      hanami-utils (~> 0.9)
+      hanami-validations (~> 0.7)
+      hanami-view (~> 0.8)
+      thor (~> 0.19)
     hanami-assets (0.4.0)
       hanami-helpers (~> 0.5)
       hanami-utils (~> 0.9)
       tilt (~> 2.0, >= 2.0.2)
-    hanami-controller (0.8.0)
+    hanami-controller (0.8.1)
       hanami-utils (~> 0.9)
       rack (~> 1.6, >= 1.6.2)
-    hanami-helpers (0.5.0)
+    hanami-helpers (0.5.1)
       hanami-utils (~> 0.9)
     hanami-mailer (0.4.0)
       hanami-utils (~> 0.9)
@@ -87,7 +82,7 @@ GEM
       hanami-utils (~> 0.9, >= 0.9.1)
       http_router (~> 0.11)
       rack (~> 1.6)
-    hanami-utils (0.9.1)
+    hanami-utils (0.9.2)
     hanami-validations (0.7.1)
       dry-validation (~> 0.10)
       hanami-utils (~> 0.9)
@@ -127,7 +122,7 @@ GEM
       rom (~> 2.0)
       rom-mapper (~> 0.4)
       rom-support (~> 2.0)
-    rom-sql (0.9.0)
+    rom-sql (0.9.1)
       dry-core (~> 0.2)
       dry-equalizer (~> 0.2)
       dry-types (~> 0.9)
@@ -159,8 +154,8 @@ DEPENDENCIES
   bundler
   capybara
   dotenv (~> 2.0)
-  hanami!
-  hanami-model (~> 0.7)
+  hanami (~> 0.9)
+  hanami-model
   lyv!
   minitest
   pg

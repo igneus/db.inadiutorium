@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'bundler'
-gem 'hanami', git: 'git@github.com:hanami/hanami.git'
-gem 'hanami-model', '~> 0.7'
+gem 'hanami', '~> 0.9'
+gem 'hanami-model'
 gem 'lyv', git: 'https://github.com/igneus/lyv.git'
 gem 'pg'
 gem 'rake'
