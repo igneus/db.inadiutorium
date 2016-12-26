@@ -6,3 +6,4 @@
 get '/home', to: 'home#index'
 
 root to: 'home#index'
+resources :zpevy, controller: :pieces, only: %i(index show)

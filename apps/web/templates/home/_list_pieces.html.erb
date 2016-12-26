@@ -2,7 +2,7 @@
   <% pieces.each do |piece| %>
   <li>
     [<%= piece.genre[0] %>]
-    <%= piece.lyrics_cleaned %>
+    <a href="/zpevy/<%= piece.id %>"><%= piece.lyrics_cleaned %></a>
   </li>
   <% end %>
 </ul>
