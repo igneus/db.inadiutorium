@@ -1,6 +1,9 @@
 class Importer
-  def initialize(root_path)
-    @root_path = root_path.sub /\/*$/, ''
+  include Inject['piece_repository', 'source_file_repository']
+
+  def initialize(**kwargs)
+    @root_path = kwargs.delete(:root_path).sub /\/*$/, ''
+    super **kwargs
     @config = load_config
   end
 
@@ -103,14 +106,6 @@ class Importer
     relative_path
     status = git.status(relative_path)
     !(status.include?(:worktree_new) || status.include?(:ignored))
-  end
-
-  def source_file_repository
-    @source_file_repository ||= SourceFileRepository.new
-  end
-
-  def piece_repository
-    @piece_repositoru ||= PieceRepository.new
   end
 
   def git

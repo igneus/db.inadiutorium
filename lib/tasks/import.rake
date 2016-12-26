@@ -1,3 +1,4 @@
+desc 'Import data'
 task import: :environment do |t|
   import_root = ENV['IMPORT_ROOT']
 
@@ -6,5 +7,5 @@ task import: :environment do |t|
     exit 1
   end
 
-  Importer.new(import_root).call
+  Importer.new(root_path: import_root).call
 end
