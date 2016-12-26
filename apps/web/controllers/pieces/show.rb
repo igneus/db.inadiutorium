@@ -1,12 +1,12 @@
 module Web::Controllers::Pieces
   class Show
     include Web::Action
+    include Inject['piece_repository']
 
     expose :piece
 
     def call(params)
-      repo = PieceRepository.new
-      @piece = repo.find params[:id]
+      @piece = piece_repository.find params[:id]
     end
   end
 end

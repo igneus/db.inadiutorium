@@ -19,6 +19,8 @@ GEM
       xpath (~> 2.0)
     concurrent-ruby (1.0.3)
     dotenv (2.1.1)
+    dry-auto_inject (0.4.2)
+      dry-container (>= 0.3.4)
     dry-configurable (0.5.0)
       concurrent-ruby (~> 1.0)
     dry-container (0.6.0)
@@ -158,6 +160,8 @@ DEPENDENCIES
   bundler
   capybara
   dotenv (~> 2.0)
+  dry-auto_inject
+  dry-container
   hanami (~> 0.9)
   hanami-model
   lyv!
