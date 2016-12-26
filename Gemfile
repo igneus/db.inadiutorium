@@ -7,6 +7,7 @@ gem 'lyv', git: 'https://github.com/igneus/lyv.git'
 gem 'pg'
 gem 'rake'
 gem 'rugged' # git bindings
+gem 'slim' # templating
 
 group :development do
   # Code reloading
