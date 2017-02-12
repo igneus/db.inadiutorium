@@ -1,6 +1,17 @@
 class PieceRepository < Hanami::Repository
+  associations do
+    belongs_to :source_file
+  end
+
   def count
     pieces.count
+  end
+
+  def find_with_source_file(id)
+    aggregate(:source_file)
+      .where(id: id)
+      .one
+      .as(Piece)
   end
 
   def list(**query)

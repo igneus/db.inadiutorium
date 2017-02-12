@@ -6,7 +6,7 @@ module Web::Controllers::Pieces
     expose :piece
 
     def call(params)
-      @piece = piece_repository.find params[:id]
+      @piece = piece_repository.find_with_source_file params[:id]
     end
   end
 end
