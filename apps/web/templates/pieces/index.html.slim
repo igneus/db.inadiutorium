@@ -1,1 +1,14 @@
 = render partial: 'home/list_pieces', locals: {pieces: pieces}
+
+/ pager
+- if page > 1
+  a href="?page=#{page - 1}" &lt;&lt;
+
+- 1.upto(pages_total) do |i|
+  - if i == page
+    strong=< i
+  - else
+    a href="?page=#{i}" =< i
+
+- if page < pages_total
+  a href="?page=#{page + 1}" &gt;&gt;
