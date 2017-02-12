@@ -1,0 +1,24 @@
+table
+  tbody
+    tr
+      th databázové id
+      td= piece.id
+    tr
+      th žánr
+      td= piece.genre
+    tr
+      th text
+      td= piece.lyrics_cleaned
+    tr
+      th soubor
+      td
+    tr
+      th id v rámci souboru
+      td= piece.piece_id
+    tr
+      th fial
+      td
+    tr
+      th zdroj
+      td
+        pre= piece.src

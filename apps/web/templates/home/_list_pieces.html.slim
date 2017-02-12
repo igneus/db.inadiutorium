@@ -1,0 +1,5 @@
+ul
+  - pieces.each do |piece|
+    li
+      => '[' + piece.genre[0] + ']'
+      a href="/zpevy/#{piece.id}" = piece.lyrics_cleaned
