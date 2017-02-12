@@ -7,7 +7,7 @@ class PieceRepository < Hanami::Repository
     pieces
       .order(:lyrics_cleaned)
       .limit(limit)
-      .offset(page - 1)
+      .offset((page - 1) * limit)
       .as(Piece)
   end
 
