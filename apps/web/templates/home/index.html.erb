@@ -18,3 +18,9 @@
   Nově aktualisované:
 </p>
 <%= render partial: 'home/list_pieces', locals: {pieces: updated_pieces} %>
+
+<p>
+  Procházet
+  <a href="<%= routes.genres_path %>">podle žánru</a>,
+  <a href="<%= routes.modes_path %>">podle modu</a>
+</p>

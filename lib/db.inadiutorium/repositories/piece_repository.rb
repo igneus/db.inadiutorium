@@ -3,16 +3,13 @@ class PieceRepository < Hanami::Repository
     pieces.count
   end
 
-  def list(limit: 10, page: 1)
-    pieces
-      .order(:lyrics_cleaned)
-      .limit(limit)
-      .offset((page - 1) * limit)
-      .as(Piece)
+  def list(**query)
+    list_query(**query).as(Piece)
   end
 
-  def pages_total(limit: 10)
-    (pieces.count.to_f / limit).ceil
+  def pages_total(limit: 10, **query)
+    list_query(**query).count
+    (list_query(**query).count.to_f / limit).ceil
   end
 
   def newly_created(limit: 10)
@@ -29,5 +26,30 @@ class PieceRepository < Hanami::Repository
       .reverse
       .limit(limit)
       .as(Piece)
+  end
+
+  private
+
+  def list_query(limit: nil, page: nil, genre: nil, mode: nil)
+    result = pieces
+             .order(:lyrics_cleaned)
+
+    if limit
+      result = result.limit(limit)
+    end
+
+    if page
+      result = result.offset((page - 1) * limit)
+    end
+
+    if genre
+      result = result.where(genre: genre)
+    end
+
+    if mode
+      result = result.where(mode: mode)
+    end
+
+    result
   end
 end

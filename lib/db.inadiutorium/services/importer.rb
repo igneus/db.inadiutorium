@@ -42,6 +42,7 @@ class Importer
         piece_id: piece_id,
         source_order: i,
         genre: genre,
+        mode: score.header['modus'],
         lyrics: score.lyrics_raw,
         lyrics_cleaned: score.lyrics_pretty,
         header: score.header,
