@@ -3,6 +3,11 @@ class PieceRepository < Hanami::Repository
     belongs_to :source_file
   end
 
+  # hackety hack:
+  # call to a method of the underlying ROM implementation
+  # to make belongs_to association loading work
+  relations :source_files
+
   def count
     pieces.count
   end
@@ -10,8 +15,8 @@ class PieceRepository < Hanami::Repository
   def find_with_source_file(id)
     aggregate(:source_file)
       .where(id: id)
-      .one
       .as(Piece)
+      .one
   end
 
   def list(**query)
